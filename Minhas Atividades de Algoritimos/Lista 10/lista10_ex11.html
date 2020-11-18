@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="curto()">Curto 3 e 5</button>
+    <br>
+    <div id="exiba1"></div>
+    <div id="exiba2"></div>
+</body>
+
+</html>
+<script>
+
+    var cont = 0;
+
+    function curto() {
+        
+        var tri = "É Tri";
+        var penta = "É Penta";
+        var tripenta = "É Tri É Penta";
+
+        while (cont <= 100) {
+            if (cont % 3 == 0) {
+                exiba1.innerHTML += `<br>${tri}`;
+
+            } else if (cont % 5 == 0){
+                exiba1.innerHTML += `<br>${penta}`;
+            } else if (cont % 3 && cont % 5 == 0) {
+                exiba1.innerHTML += `<br>${tripenta}`;
+            } else {
+                exiba1.innerHTML += `<br>${cont}`;
+            }
+            cont++;
+        }
+    }
+</script>

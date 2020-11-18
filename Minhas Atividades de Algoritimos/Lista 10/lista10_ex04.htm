@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lista 10 ex 04</title>
+</head>
+
+<body>
+    <input type="text" id="quem" placeholder="Quem você mais ama?"><br>
+    <input type="text" id="quanto" placeholder="Quanto você ama?"><br>
+    <button onclick="expressar()">Expressar amor</button>
+    <br>
+    <div id="disse"></div>
+</body>
+
+</html>
+<script>
+    function expressar() {
+        var qtd = quanto.value;
+        var qtdama = 0;
+        var qmama = quem.value;
+        while (qtd > qtdama) {
+            disse.innerHTML += `<br>${qmama}! eu te amo! sempre lembre disso!`;
+            qtdama++;
+        }
+
+
+
+
+    }
+
+</script>

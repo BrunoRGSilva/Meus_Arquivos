@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lista 10 ex 05</title>
+</head>
+
+<body>
+    <input type="text" id="quantos" placeholder="Quantos numeros você quer sortear"><br>
+    <button onclick="sortear()">Sortear numero</button>
+    <br>
+    <div id="disse"></div>
+</body>
+
+</html>
+<script>
+    function sortear() {
+        var qtd = quantos.value;
+        var qtdql = 0;
+        disse.innerHTML = "";
+        while (qtd > qtdql) {
+            qtdql++;
+            var qtdsort = (Math.random() * 100).toFixed(0);
+            disse.innerHTML += `<br>${qtdsort}`;
+
+        }
+
+
+
+
+    }
+
+</script>

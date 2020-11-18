@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lista 10 ex 3</title>
+</head>
+
+<body>
+    Qual time é melhor?
+    <br>
+    <input type="text" id="time1" placeholder="Diga o time">
+    <input type="text" id="time2" placeholder="Diga o time">
+    <button onclick="melhor()">Me diga</button>
+    <br>
+    <div id="disse"></div>
+</body>
+
+</html>
+<script>
+    function melhor() {
+        var contador = 0
+        var timeruim = time2.value;
+        var timebom = time1.value;
+        while (contador < 10) {
+            contador++;
+            disse.innerHTML += `${contador} ${timebom} é melhor que ${timeruim}<br>`;
+        }
+
+
+    }
+
+
+
+
+</script>
