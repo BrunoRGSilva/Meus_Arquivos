@@ -1,0 +1,117 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: greenyellow
+  
+}
+center {
+    text-align: -webkit-center;
+}
+.begin {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.container {
+    width: 90%;
+    height: 30px;
+    margin: auto;
+}
+
+.site-name h1 {
+    float: left;
+    color: limegreen;
+    position: relative;
+    justify-content: unset;
+}
+.site-name span{
+    color: goldenrod;
+}
+.begin {
+    z-index: 20;
+    right: 0;
+    height: 4.6rem;
+    background-color: #fff;
+    box-sizing: border-box;
+    border-bottom: 1px solid white;
+}
+
+.site-links li {
+    display: inline-block;
+    padding: 20px;
+    padding: 10px 20px 0 20px;
+    color: limegreen;
+}
+
+
+.links-site:hover {
+	color:greenyellow; 
+    font-size:125%; 
+	}
+    a:link, a:visited {
+        text-decoration: none
+     greenyellow
+        }
+    a:active {
+        text-decoration: none
+      greenyellow
+        }
+.links-site a {
+    color: inherit; 
+}
+a{
+    font-weight: 500;
+    text-decoration: none;
+    color: inherit;
+}
+.site-links {
+    float: right;
+}
+
+.begin .content .mangas {
+    align-content: unset;
+    align-items: unset;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: unset;
+    margin-top: 0.1rem;
+    padding: 0.2rem 0;
+    border-top: 1px solid white;
+}
+
+.mangas {
+    margin-left: 100px;
+    overflow: auto;
+}
+
+.mangas .slot-mangas {
+    text-align: center;
+    float: left;
+    margin: 35px 35px 0px 35px;
+    color: greenyellow;
+}
+
+.mangas img {
+    height: 200px;
+    border: solid 4px white;
+    border-radius: 10px;
+}
+.tools #chapters{
+   width: 200px;
+   margin-left: 20px;
+   margin-top: 50px;
+}
+
+.manga-pages{
+    display: none;
+    max-width: 100%;
+    align-items: center;
+}
+.footer {
+    border-top: 1px solid white;
+    color: greenyellow;
+    padding: 1.5rem;
+    text-align: center;
+}

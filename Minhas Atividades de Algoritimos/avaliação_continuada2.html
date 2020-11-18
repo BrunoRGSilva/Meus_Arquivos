@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input id="lj" type="text" style="display: block;" placeholder="Loja">
+    <br>
+    <input id="cnt" type="text" style="display: block;" placeholder="Conta">
+    <br>
+    <input id="dgt" type="text" style="display: block;" placeholder="Digito">
+    <br>
+    <button id="conf" onclick="conferir()" style="display: block;">Validar</button>
+    <br>
+    <div id="div_menseng"></div>
+    <br>
+    <input id="pass_word" type="text" placeholder="Entre com sua senha" style="display: none;">
+    <br>
+    <button id="clean" onclick="limpar()" style="display: none;">Limpar</button>
+    <br>
+    <button id="enter" onclick="entrar()" style="display: none;">Entrar</button>
+    <div id="div_exib"></div>
+</body>
+
+</html>
+<script>
+    function conferir() {
+
+        var loja = lj.value;
+        var conta = cnt.value;
+        var digito = dgt.value;
+        var rest = conta % loja;
+
+        if (loja <= 0 || loja > 10) {
+            alert("Loja invalida");
+        } else if (loja >= 1 || loja <= 10) {
+            alert("Loja valida");
+            lj.style.display = "none";
+            div_menseng.innerHTML = `<h2>Olá cliente entre com a sua senha</h2>`;
+            pass_word.style.display = "block";
+            clean.style.display = "block";
+            enter.style.display = "block";
+            conf.style.display = "none";
+        } if (conta <= 0) {
+            alert("Conta invalida");
+        } else if (conta > 0) {
+            alert("Conta valida");
+            cnt.style.display = "none";
+            div_menseng.innerHTML = `<h2>Olá cliente entre com a sua senha</h2>`;
+            pass_word.style.display = "block";
+            clean.style.display = "block";
+            enter.style.display = "block";
+            conf.style.display = "none";
+        } if (digito == 1 && rest < 3) {
+            alert("Digito valido");
+            dgt.style.display = "none";
+            div_menseng.innerHTML = `<h2>Olá cliente entre com a sua senha</h2>`;
+            pass_word.style.display = "block";
+            clean.style.display = "block";
+            enter.style.display = "block";
+            conf.style.display = "none";
+        } else if (digito == 2 && rest >= 3 || rest <= 6) {
+            alert("Digito valido");
+            dgt.style.display = "none";
+            div_menseng.innerHTML = `<h2>Olá cliente entre com a sua senha</h2>`;
+            pass_word.style.display = "block";
+            clean.style.display = "block";
+            enter.style.display = "block";
+            conf.style.display = "none";
+        } else if (digito == 3 && rest > 6) {
+            alert("Digito valido");
+            dgt.style.display = "none";
+            div_menseng.innerHTML = `<h2>Olá cliente entre com a sua senha</h2>`;
+            pass_word.style.display = "block";
+            clean.style.display = "block";
+            enter.style.display = "block";
+            conf.style.display = "none";
+        } else if (digito <= 0 || digito > 3) {
+            alert("Digito invalido");
+        }
+    }
+
+    function limpar() {
+        pass_word.value = "";
+    }
+    var contar = 0;
+    function entrar() {
+        contar++;
+        var digito = dgt.value;
+        var senha = pass_word.value
+        if (digito == 1 && senha == "recife") {
+
+        } else if (digito == 2 && senha == "manaus") {
+
+        } else if (digito == 3 && senha == "fortaleza") {
+
+        } if (contar >= 4) {
+            alert("Você excedeu o número de tentativas, sua conta está bloqueada, PROCURE O SUPORTE");
+            contar = 0;
+            pass_word.value = "";
+        } else {
+            pass_word.value = "";
+            div_exib.innerHTML += `<br>Senha invalida`;
+        }
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
